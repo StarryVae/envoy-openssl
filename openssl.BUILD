@@ -5,9 +5,11 @@ licenses(["notice"])  # Apache 2
 cc_library(
     name = "openssl-lib",
     srcs = [
-        "libcrypto.so.1.1",
-        "libssl.so.1.1",
+        "lib/libcrypto.so.1.1",
+        "lib/libssl.so.1.1",
     ],
+    hdrs = glob(["include/openssl/*.h"]),
+    includes = ["include"],
     linkstatic = False,
     visibility = ["//visibility:public"],
 )

@@ -27,7 +27,7 @@ envoy_dependency_imports()
 new_local_repository(
     name = "openssl",
     build_file = "openssl.BUILD",
-    path = "/usr/lib64/",
+    path = "/opt/tongsuo",
 )
 new_local_repository(
     name = "emscripten_toolchain",
